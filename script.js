@@ -33,6 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
         renderEmployeeList();
     });
 
+    document.addEventListener('click', (e) => {
+        if (addEmployeeModal.style.display === 'flex' && !addEmployeeForm.contains(e.target) && e.target !== createEmployeeButton) {
+            addEmployeeModal.style.display = 'none';
+        }
+    });
+
     function renderEmployeeList() {
         employeeList.innerHTML = '';
         employees.forEach((employee, index) => {
