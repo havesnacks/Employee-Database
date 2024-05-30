@@ -1,0 +1,192 @@
+:root { 
+    --primary-color: #4CAF50;
+    --secondary-color: #fff;
+    --background: #f5f5f5;
+    --border-color: #e0e0e0;
+    --text-color: #333;
+    --btn: #4CAF50; 
+    --btn-hover: #45a049; 
+    --item-bg: #fff; 
+    --modal-bg: rgba(0, 0, 0, 0.5); 
+} 
+
+body { 
+    font-family: 'Roboto', sans-serif; 
+    padding: 0 10px; 
+    background-color: var(--background);
+    color: var(--text-color);
+} 
+
+.header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+} 
+
+.header h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+.header > button { 
+    padding: 10px 20px; 
+    border-radius: 20px; 
+    border: none; 
+    background-color: var(--btn); 
+    color: var(--secondary-color);
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+} 
+
+.header > button:hover { 
+    background-color: var(--btn-hover); 
+} 
+
+.employees { 
+    display: flex; 
+    margin-top: 20px;
+    gap: 20px;
+} 
+
+.employees > div { 
+    border: 1px solid var(--border-color); 
+    overflow-y: scroll; 
+    height: 450px; 
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} 
+
+.employees__names { 
+    width: 30%; 
+} 
+
+.employees__single { 
+    width: 70%; 
+} 
+
+.employees__names, 
+.employees__single { 
+    padding: 20px; 
+    display: flex; 
+    flex-direction: column; 
+} 
+
+.employees__names--title, 
+.employees__single--title { 
+    padding-bottom: 10px; 
+    margin-bottom: 15px; 
+    text-align: center; 
+    border-bottom: 1px solid var(--border-color); 
+    font-size: 20px;
+    font-weight: bold;
+} 
+
+.employees__names--list { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px;
+} 
+
+.employees__names--item { 
+    cursor: pointer; 
+    padding: 10px 15px; 
+    margin-bottom: 5px; 
+    text-align: center; 
+    background-color: var(--item-bg); 
+    border-radius: 10px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} 
+
+.employees__names--item:hover, 
+.selected { 
+    background-color: var(--btn); 
+    color: var(--secondary-color);
+} 
+
+.employees__single--heading { 
+    text-align: center; 
+    font-size: 25px; 
+    text-transform: uppercase; 
+    padding: 5px; 
+    color: var(--btn);
+} 
+
+.employees__single--info { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+} 
+
+.employees__single--info > img { 
+    width: 250px; 
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} 
+
+.addEmployee { 
+    display: none; 
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: var(--modal-bg); 
+} 
+
+.addEmployee_create { 
+    width: 400px; 
+    background-color: var(--secondary-color); 
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    border-radius: 10px; 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+} 
+
+.addEmployee_create > div { 
+    display: grid; 
+    grid-template-columns: 48.1% 48.1%; 
+    column-gap: 15px; 
+} 
+
+.addEmployee_create input { 
+    padding: 10px; 
+    border-radius: 5px; 
+    border: 1px solid var(--border-color); 
+} 
+
+.addEmployee_create input::-webkit-outer-spin-button, 
+.addEmployee_create input::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+} 
+
+.addEmployee_create--submit { 
+    padding: 10px; 
+    border-radius: 5px; 
+    border: none; 
+    background-color: var(--btn); 
+    color: var(--secondary-color);
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+} 
+
+.addEmployee_create--submit:hover { 
+    background-color: var(--btn-hover); 
+}
